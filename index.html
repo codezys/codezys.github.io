@@ -152,6 +152,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><h4 id="1-下载node-js-、-git（https-git-scm-com-）"><a href="#1-下载node-js-、-git（https-git-scm-com-）" class="headerlink" title="1.下载node.js 、 git（https://git-scm.com/）"></a>1.下载node.js 、 git（<a href="https://git-scm.com/）" target="_blank" rel="noopener">https://git-scm.com/）</a></h4><p>​        node -v 查看node版本<br>        npm -v    查看npm版本</p>
+<h4 id="2-用npm下载cnpm（镜像源）"><a href="#2-用npm下载cnpm（镜像源）" class="headerlink" title="2.用npm下载cnpm（镜像源）"></a>2.用npm下载cnpm（镜像源）</h4><p>​        npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>        cnpm -v 查看cnpm版本</p>
+<h4 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h4><p>​        cnpm install -g hexo-cli<br>        hexo -v  查看hexo版本</p>
+<h4 id="3-1-新建一个空的文件夹blog"><a href="#3-1-新建一个空的文件夹blog" class="headerlink" title="3.1.新建一个空的文件夹blog"></a>3.1.新建一个空的文件夹blog</h4><p>​        mkdir blog</p>
+<h4 id="3-2-进入blog"><a href="#3-2-进入blog" class="headerlink" title="3.2.进入blog"></a>3.2.进入blog</h4><p>​        cd blog</p>
+<h4 id="4-初始化博客"><a href="#4-初始化博客" class="headerlink" title="4.初始化博客"></a>4.初始化博客</h4><p>​        hexo init</p>
+<h4 id="5-启动博客"><a href="#5-启动博客" class="headerlink" title="5.启动博客"></a>5.启动博客</h4><p>​        hexo s<br>        localhost:4000 进入博客<br>        ctrl+c 断开</p>
+<h4 id="6-创建博客"><a href="#6-创建博客" class="headerlink" title="6.创建博客:"></a>6.创建博客:</h4><p>​        hexo n “博客名字”</p>
+<h4 id="7-打开编写博客"><a href="#7-打开编写博客" class="headerlink" title="7.打开编写博客"></a>7.打开编写博客</h4><p>​        存放在 /source/_posts/<br>        进入你的博客</p>
+<pre><code>## 第一章
+内容
+---
+## 第二章
+内容
+---
+保存、退出
+</code></pre><h4 id="7-1-退到blog目录下"><a href="#7-1-退到blog目录下" class="headerlink" title="7.1.退到blog目录下"></a>7.1.退到blog目录下</h4><p>​        cd ../../</p>
+<h4 id="8-清理博客"><a href="#8-清理博客" class="headerlink" title="8.清理博客"></a>8.清理博客</h4><p>​        hexo clean</p>
+<h4 id="9-生成博客"><a href="#9-生成博客" class="headerlink" title="9.生成博客"></a>9.生成博客</h4><p>​        hexo g </p>
+<h4 id="9-1-启动"><a href="#9-1-启动" class="headerlink" title="9.1.启动"></a>9.1.启动</h4><p>​        hexo s<br>        浏览器浏览 localhost:4000</p>
+<h4 id="9-2-部署到远端github"><a href="#9-2-部署到远端github" class="headerlink" title="9.2.部署到远端github"></a>9.2.部署到远端github</h4><p>​        注册github<br>        右上角加号 new repository<br>        Repository name  用户名+ .github.io<br>        Description  介绍<br>        create repository<br>        地址等下有用</p>
+<h4 id="10-安装git部署插件"><a href="#10-安装git部署插件" class="headerlink" title="10.安装git部署插件"></a>10.安装git部署插件</h4><p>​        cnpm install –save hexo-deployer-git</p>
+<h4 id="11-配置——config-xml"><a href="#11-配置——config-xml" class="headerlink" title="11.配置——config.xml"></a>11.配置——config.xml</h4><p>​        # Deployment</p>
+<pre><code>## Docs: https://hexo.io/docs/deployment.html
+deploy:
+type: git
+repo: -----刚才github生成的地址
+branch: master
+</code></pre><h4 id="12-部署到远端"><a href="#12-部署到远端" class="headerlink" title="12.部署到远端"></a>12.部署到远端</h4><p>​        hexo d</p>
+<h4 id="12-1-访问仓库名"><a href="#12-1-访问仓库名" class="headerlink" title="12.1.访问仓库名"></a>12.1.访问仓库名</h4><p>​        <a href="https://codezys.github.io/" target="_blank" rel="noopener">https://codezys.github.io/</a></p>
+<h4 id="13-配置主题"><a href="#13-配置主题" class="headerlink" title="13.配置主题"></a>13.配置主题</h4><p>​        克隆主题<br>        git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br>        在themes目录下<br>        更改主题–config.xml</p>
+<pre><code># Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: yilia
+清理一下
+hexo clean
+生成一下
+hexo g
+开始一下
+hexo s
+推向远端
+hexo d
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/15/搭建博客/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -187,90 +277,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/04/27/hello/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/27/hello-world/">����</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/27/hello-world/" class="archive-article-date">
-  	<time datetime="2019-04-27T06:26:18.160Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>����: node.js �git �gitHub</p>
-<h3 id="1-��node-js-�-git�https-git-scm-com-�"><a href="#1-��node-js-�-git�https-git-scm-com-�" class="headerlink" title="1.��node.js � git�https://git-scm.com/�"></a>1.��node.js � git�<a href="https://git-scm.com/�" target="_blank" rel="noopener">https://git-scm.com/�</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v ��node��</span><br><span class="line">npm -v	��npm��</span><br></pre></td></tr></table></figure>
-<h3 id="2-�npm��cnpm�����"><a href="#2-�npm��cnpm�����" class="headerlink" title="2.�npm��cnpm�����"></a>2.�npm��cnpm�����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">cnpm -v ��cnpm��</span><br></pre></td></tr></table></figure>
-<h3 id="3-��Hexo"><a href="#3-��Hexo" class="headerlink" title="3.��Hexo"></a>3.��Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br><span class="line">hexo -v  ��hexo��</span><br></pre></td></tr></table></figure>
-<h3 id="3-1-���������blog"><a href="#3-1-���������blog" class="headerlink" title="3.1.���������blog"></a>3.1.���������blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog</span><br></pre></td></tr></table></figure>
-<h3 id="3-2-��blog"><a href="#3-2-��blog" class="headerlink" title="3.2.��blog"></a>3.2.��blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
-<h3 id="4-�����"><a href="#4-�����" class="headerlink" title="4.�����"></a>4.�����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<h3 id="5-����"><a href="#5-����" class="headerlink" title="5.����"></a>5.����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	hexo s</span><br><span class="line">	<span class="comment">### 3.2.��blog</span></span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">        <span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure>
-<h3 id="4-�����-1"><a href="#4-�����-1" class="headerlink" title="4.�����"></a>4.�����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<h3 id="5-����-1"><a href="#5-����-1" class="headerlink" title="5.����"></a>5.����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br><span class="line"></span><br><span class="line">ctrl+c ��</span><br></pre></td></tr></table></figure>
-<h3 id="6-����"><a href="#6-����" class="headerlink" title="6.����"></a>6.����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">"����"</span></span><br></pre></td></tr></table></figure>
-<h3 id="7-������"><a href="#7-������" class="headerlink" title="7.������"></a>7.������</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">��� /<span class="built_in">source</span>/_posts/</span><br><span class="line">	������</span><br><span class="line">	<span class="comment">## ���</span></span><br><span class="line">	��</span><br><span class="line">	---</span><br><span class="line">	<span class="comment">## ���</span></span><br><span class="line">	��</span><br><span class="line">	---</span><br><span class="line">	�����</span><br></pre></td></tr></table></figure>
-<h3 id="7-1-��blog���"><a href="#7-1-��blog���" class="headerlink" title="7.1.��blog���"></a>7.1.��blog���</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../../</span><br></pre></td></tr></table></figure>
-<h3 id="8-����"><a href="#8-����" class="headerlink" title="8.����"></a>8.����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-<h3 id="9-����"><a href="#9-����" class="headerlink" title="9.����"></a>9.����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<h3 id="9-1-��"><a href="#9-1-��" class="headerlink" title="9.1.��"></a>9.1.��</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br><span class="line">����� localhost:4000</span><br></pre></td></tr></table></figure>
-<h3 id="9-2-�����github"><a href="#9-2-�����github" class="headerlink" title="9.2.�����github"></a>9.2.�����github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">��github</span><br><span class="line">����� new repository</span><br><span class="line">Repository name  ���+ .github.io</span><br><span class="line">Description  ��</span><br><span class="line">create repository</span><br><span class="line">������</span><br></pre></td></tr></table></figure>
-<h3 id="10-��git����"><a href="#10-��git����" class="headerlink" title="10.��git����"></a>10.��git����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-<h3 id="11-��–config-xml"><a href="#11-��–config-xml" class="headerlink" title="11.��–config.xml"></a>11.��–config.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line"><span class="built_in">type</span>: git</span><br><span class="line">repo: -----��github�����</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
-<h3 id="12-�����"><a href="#12-�����" class="headerlink" title="12.�����"></a>12.�����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d������</span><br><span class="line">������</span><br></pre></td></tr></table></figure>
-<h3 id="12-1-�����"><a href="#12-1-�����" class="headerlink" title="12.1.�����"></a>12.1.�����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">�����  https://codezys.github.io/</span><br></pre></td></tr></table></figure>
-<h3 id="13-����"><a href="#13-����" class="headerlink" title="13.����"></a>13.����</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">����</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line">�themes���</span><br><span class="line">����--config.xml</span><br><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: yilia</span><br><span class="line">����</span><br><span class="line">hexo clean</span><br><span class="line">����</span><br><span class="line">hexo g</span><br><span class="line">����</span><br><span class="line">hexo s</span><br><span class="line">����</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/27/hello-world/">展开全文 >></a>
         </p>
       
 
