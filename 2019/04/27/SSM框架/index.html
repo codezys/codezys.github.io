@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>SSM框架 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="SSM(spring springmvc mybatis)springMvc1.springmvc的原理？springmvc的工作流程?springmvc的源码你看过吗？​        首先请求到达核心控制器dispatcherServlet，dispatcherServlet会判断请求       后缀是否满足格式要求，如果满足格式要求，会查询handlerMapping，查找       对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSM框架">
+<meta property="og:url" content="http://yoursite.com/2019/04/27/SSM框架/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="SSM(spring springmvc mybatis)springMvc1.springmvc的原理？springmvc的工作流程?springmvc的源码你看过吗？​        首先请求到达核心控制器dispatcherServlet，dispatcherServlet会判断请求       后缀是否满足格式要求，如果满足格式要求，会查询handlerMapping，查找       对">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="c:/Users/ASUS/AppData/Local/Temp/1557926105356.png">
+<meta property="og:updated_time" content="2019-05-15T13:47:48.471Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="SSM框架">
+<meta name="twitter:description" content="SSM(spring springmvc mybatis)springMvc1.springmvc的原理？springmvc的工作流程?springmvc的源码你看过吗？​        首先请求到达核心控制器dispatcherServlet，dispatcherServlet会判断请求       后缀是否满足格式要求，如果满足格式要求，会查询handlerMapping，查找       对">
+<meta name="twitter:image" content="c:/Users/ASUS/AppData/Local/Temp/1557926105356.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,106 +156,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><h4 id="1-下载node-js-、-git（https-git-scm-com-）"><a href="#1-下载node-js-、-git（https-git-scm-com-）" class="headerlink" title="1.下载node.js 、 git（https://git-scm.com/）"></a>1.下载node.js 、 git（<a href="https://git-scm.com/）" target="_blank" rel="noopener">https://git-scm.com/）</a></h4><p>​        node -v 查看node版本<br>        npm -v    查看npm版本</p>
-<h4 id="2-用npm下载cnpm（镜像源）"><a href="#2-用npm下载cnpm（镜像源）" class="headerlink" title="2.用npm下载cnpm（镜像源）"></a>2.用npm下载cnpm（镜像源）</h4><p>​        npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>        cnpm -v 查看cnpm版本</p>
-<h4 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h4><p>​        cnpm install -g hexo-cli<br>        hexo -v  查看hexo版本</p>
-<h4 id="3-1-新建一个空的文件夹blog"><a href="#3-1-新建一个空的文件夹blog" class="headerlink" title="3.1.新建一个空的文件夹blog"></a>3.1.新建一个空的文件夹blog</h4><p>​        mkdir blog</p>
-<h4 id="3-2-进入blog"><a href="#3-2-进入blog" class="headerlink" title="3.2.进入blog"></a>3.2.进入blog</h4><p>​        cd blog</p>
-<h4 id="4-初始化博客"><a href="#4-初始化博客" class="headerlink" title="4.初始化博客"></a>4.初始化博客</h4><p>​        hexo init</p>
-<h4 id="5-启动博客"><a href="#5-启动博客" class="headerlink" title="5.启动博客"></a>5.启动博客</h4><p>​        hexo s<br>        localhost:4000 进入博客<br>        ctrl+c 断开</p>
-<h4 id="6-创建博客"><a href="#6-创建博客" class="headerlink" title="6.创建博客:"></a>6.创建博客:</h4><p>​        hexo n “博客名字”</p>
-<h4 id="7-打开编写博客"><a href="#7-打开编写博客" class="headerlink" title="7.打开编写博客"></a>7.打开编写博客</h4><p>​        存放在 /source/_posts/<br>        进入你的博客</p>
-<pre><code>## 第一章
-内容
----
-## 第二章
-内容
----
-保存、退出
-</code></pre><h4 id="7-1-退到blog目录下"><a href="#7-1-退到blog目录下" class="headerlink" title="7.1.退到blog目录下"></a>7.1.退到blog目录下</h4><p>​        cd ../../</p>
-<h4 id="8-清理博客"><a href="#8-清理博客" class="headerlink" title="8.清理博客"></a>8.清理博客</h4><p>​        hexo clean</p>
-<h4 id="9-生成博客"><a href="#9-生成博客" class="headerlink" title="9.生成博客"></a>9.生成博客</h4><p>​        hexo g </p>
-<h4 id="9-1-启动"><a href="#9-1-启动" class="headerlink" title="9.1.启动"></a>9.1.启动</h4><p>​        hexo s<br>        浏览器浏览 localhost:4000</p>
-<h4 id="9-2-部署到远端github"><a href="#9-2-部署到远端github" class="headerlink" title="9.2.部署到远端github"></a>9.2.部署到远端github</h4><p>​        注册github<br>        右上角加号 new repository<br>        Repository name  用户名+ .github.io<br>        Description  介绍<br>        create repository<br>        地址等下有用</p>
-<h4 id="10-安装git部署插件"><a href="#10-安装git部署插件" class="headerlink" title="10.安装git部署插件"></a>10.安装git部署插件</h4><p>​        cnpm install –save hexo-deployer-git</p>
-<h4 id="11-配置——config-xml"><a href="#11-配置——config-xml" class="headerlink" title="11.配置——config.xml"></a>11.配置——config.xml</h4><p>​        # Deployment</p>
-<pre><code>## Docs: https://hexo.io/docs/deployment.html
-deploy:
-type: git
-repo: -----刚才github生成的地址
-branch: master
-</code></pre><h4 id="12-部署到远端"><a href="#12-部署到远端" class="headerlink" title="12.部署到远端"></a>12.部署到远端</h4><p>​        hexo d</p>
-<h4 id="12-1-访问仓库名"><a href="#12-1-访问仓库名" class="headerlink" title="12.1.访问仓库名"></a>12.1.访问仓库名</h4><p>​        <a href="https://codezys.github.io/" target="_blank" rel="noopener">https://codezys.github.io/</a></p>
-<h4 id="13-配置主题"><a href="#13-配置主题" class="headerlink" title="13.配置主题"></a>13.配置主题</h4><p>​        ##克隆主题<br>        git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br>        在themes目录下<br>        更改主题–config.xml</p>
-<pre><code># Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: yilia
-清理一下
-hexo clean
-生成一下
-hexo g
-开始一下
-hexo s
-推向远端
-hexo d
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/15/搭建博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SSM框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-SSM框架" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/27/SSM框架/">SSM框架</a>
+    <h1 class="article-title" itemprop="name">
+      SSM框架
     </h1>
   
 
@@ -299,6 +213,27 @@ hexo d
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -306,16 +241,79 @@ hexo d
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/27/SSM框架/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/27/SSM框架/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/05/15/搭建博客/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -335,8 +333,14 @@ hexo d
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -359,8 +363,8 @@ hexo d
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
